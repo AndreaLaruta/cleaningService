@@ -1,494 +1,785 @@
-<!DOCTYPE HTML>
-<!--
-	Justice by freehtml5.co
-	Twitter: http://twitter.com/fh5co
-	URL: http://freehtml5.co
--->
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>SUPERSTAR CLEANING SERVICES INC.</title>
+    <!-- 
+    - primary meta tags
+    -->
+    <title>SUPERSTAR CLEANING SERVICES INC.</title>
+    <meta name="title" content="SUPERSTAR - Professional Cleaning Services." />
+    <meta
+      name="description"
+      content="SUPERSTAR Cleaning Services INC. provides top-notch cleaning services to make your home or office sparkle."
+    />
 
-	<link rel="icon" sizes="57x57" href="favicon.ico">
+    <!-- 
+    - favicon
+    -->
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
+
+    <!-- 
+    - google font link
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- 
+    - custom css link
+    -->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+
+    <!-- 
+    - preload images
+    -->
+    <link rel="preload" as="image" href="./assets/images/hero-banner.jpg" />
+    <link
+      rel="preload"
+      as="image"
+      href="./assets/images/cleaning-service.jpg"
+    />
+  </head>
+
+  <body>
+    <!-- 
+    - #HEADER
+  -->
+
+    <header class="header" data-header>
+      <div class="container">
+        <a href="#" class="logo">
+          <img
+            src="./assets/images/logo/logo.png"
+            width="64"
+            height="24"
+            alt="SUPERSTAR"
+          />
+        </a>
+
+        <!-- <div class="col-sm-2 col-xs-12 container_logo">
+          <div id="gtco-logo ">
+            <a href="index.html" class="text_logo"
+              >SUPER<span class="text_blue_logo">STAR</span></a
+            >
+          </div>
+        </div> -->
+
+        <nav class="navbar" data-navbar>
+          <div class="navbar-top">
+            <a href="#" class="logo">
+              <img
+                src="./assets/images/logo-light.svg"
+                width="64"
+                height="24"
+                alt="SUPERSTAR"
+              />
+            </a>
+
+            <button
+              class="nav-close-btn"
+              aria-label="close menu"
+              data-nav-toggler
+            >
+              <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+            </button>
+          </div>
+
+          <ul class="navbar-list">
+            <li>
+              <a href="#" class="navbar-link">Home</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-link">About</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-link">Type of Services</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-link">Our Products</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-link">Contact</a>
+            </li>
+          </ul>
+
+          <div class="wrapper">
+            <a href="mailto:info@email.com" class="contact-link"
+              >info@email.com</a
+            >
+
+            <a href="tel:001234567890" class="contact-link"
+              >00 (123) 456 78 90</a
+            >
+          </div>
+
+          <ul class="social-list">
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-dribbble"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+          <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+        <div class="overlay" data-nav-toggler data-overlay></div>
+      </div>
+    </header>
+
+    <main>
+      <article>
+        <!-- 
+        - #HERO
+      -->
+
+        <section class="section hero" aria-label="home">
+          <div class="container">
+            <figure class="hero-banner">
+              <img
+                src="./assets/images/logo/logo.png"
+                width="560"
+                height="540"
+                alt="SUPERSTAR"
+                class="w-100"
+                data-reveal="top"
+              />
+            </figure>
+
+            <div class="hero-content">
+              <h1
+                style="color: #ffff"
+                class="h1 hero-title"
+                data-reveal="top"
+                data-reveal-delay="0.5s"
+              >
+                Professional Cleaning Services
+              </h1>
+
+              <p
+                style="color: #ffff"
+                class="section-text"
+                data-reveal="top"
+                data-reveal-delay="0.75s"
+              >
+                Welcome to SUPERSTAR Cleaning Services INC. We provide top-notch
+                cleaning services to make your home or office sparkle. Based in
+                London, we are passionate about delivering the best service to
+                our clients.
+              </p>
+
+              <div class="btn-wrapper" data-reveal="top" data-reveal-delay="1s">
+                <a href="#" class="btn btn-primary">Our Services</a>
+                <a href="#" class="btn btn-secondary">Contact Us</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 
+        - #PROJECT
+      -->
+
+        <section class="section project" aria-labelledby="project-label">
+          <div class="container">
+            <div class="title-wrapper" data-reveal="top">
+<div>
+  <h2 class="h2 section-title" id="project-label">
+    Latest Cleaning Services
+  </h2>
+
+  <p class="section-text">
+    Explore some of our recent cleaning projects and see how we maintain cleanliness with excellence.
+  </p>
+</div>
 
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Superstar Cleaning Services Website" />
-	<meta name="keywords"
-		content="cleaning, service, super, star, superstar, superstar, services, cleaning services, superstar cleaning services" />
-	<meta name="author" content="Superstar Cleaning Services" />
+              <a href="#" class="btn btn-secondary">See All Projects</a>
+            </div>
 
-	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content="" />
-	<meta property="og:image" content="" />
-	<meta property="og:url" content="" />
-	<meta property="og:site_name" content="" />
-	<meta property="og:description" content="" />
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
+            <ul class="grid-list">
+              <li>
+                <div
+                  class="project-card project-card-1"
+                  style="background-color: #f8f5fb"
+                >
+                  <div class="card-content" data-reveal="left">
+                    <p class="card-tag" style="color: #bb0823"> Super Star Cleaning Services Inc.</p>
+                    <h3 class="h3 card-title">
+                      Super Star Cleaning Services Inc. is Excellence & Honesty
+                    </h3>
+                    <p class="card-text">
+                      A local and family-owned, house and office cleaning
+                      company located in Stafford County, VA. We are more than
+                      15 years in business, licensed registered and insured If
+                      you need your house or business cleaned. You can call us
+                      or use the contact form on this website. We offer you a
+                      FREE estimate over the phone, on-site or online. Efficient
+                      teams of 1-3 people, depending on the size of the project,
+                      will arrive on time ready to serve you. Due to Covid 19 we
+                      are taking extensive measures to ensure your safety
+                      against the virus such as wearing disposable gloves,
+                      shoes, and masks for each service. We work Monday thru
+                      Fridays. We understand taking care of your families can be
+                      a stressful job to take on, our goal is to help you to
+                      relieve some of that stress and lead on a more harmonious
+                      life with your family.
+                    </p>
+                    <a href="#" class="btn-text" style="color: #bb0823">
+                      <span class="span">See Project</span>
+                      <ion-icon
+                        name="arrow-forward-outline"
+                        aria-hidden="true"
+                      ></ion-icon>
+                    </a>
+                  </div>
 
-	<!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400, 900" rel="stylesheet"> -->
+                  <figure class="card-banner" data-reveal="right">
+                    <img
+                      src="./assets/images/service/service-2.jpg"
+                      width="400"
+                      height="100"
+                      loading="lazy"
+                      alt=" Super Star Cleaning Services Inc."
+                      class="w-100"
+                    />
+                  </figure>
+                </div>
+              </li>
 
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Themify Icons-->
-	<link rel="stylesheet" href="css/themify-icons.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<!-- Magnific Popup -->
-	<link rel="stylesheet" href="css/magnific-popup.css">
-	<!-- Owl Carousel  -->
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-	<!-- Flexslider -->
-	<link rel="stylesheet" href="css/flexslider.css">
-	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css">
+              <li>
+                <div
+                  class="project-card project-card-2"
+                  style="background-color: #f1f5fd"
+                >
+<div class="card-content" data-reveal="right">
+  <p class="card-tag" style="color: #3f78e0">Cleaning Service</p>
 
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+  <h3 class="h3 card-title">Professional Cleaning Service</h3>
 
-</head>
+  <p class="card-text">
+    We are a local, family-owned cleaning company serving homes and offices in Stafford County, VA. With over 15 years in business, we are fully licensed, registered, and insured. Whether you need your home or business cleaned, you can call us or use the contact form on this website. We offer a FREE estimate over the phone, on-site, or online. Our efficient teams, ranging from 1-3 people depending on the project size, arrive on time and ready to serve. In response to Covid-19, we implement extensive safety measures, including wearing disposable gloves, shoes, and masks for each service. We operate Monday through Friday. We understand that managing your household can be stressful, and our goal is to alleviate some of that stress and help you lead a more harmonious life with your family.
+  </p>
 
-<body>
+  <a href="#" class="btn-text" style="color: #3f78e0">
+    <span class="span">See Service</span>
 
-	<div class="gtco-loader"></div>
-
-	<div id="page">
-		<nav class="gtco-nav" role="navigation">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-2 col-xs-12 container_logo">
-
-						<div id="gtco-logo "><a href="index.html" class="text_logo">SUPER<span
-									class="text_blue_logo">STAR</span></a></div>
-					</div>
-					<div class="col-xs-10 text-right menu-1 main-nav">
-						<ul>
-							<li class="active"><a href="#" data-nav-section="home">Home</a></li>
-							<li><a href="#" data-nav-section="about">About</a></li>
-							<li><a href="#" data-nav-section="practice-areas">Type of Services</a></li>
-							<li><a href="#" data-nav-section="our-team">Our Service Areas</a></li>
-							<li><a href="#" data-nav-section="our-team">Our Products</a></li>
-							<li class="btn-cta"><a href="#" data-nav-section="contact"><span>Contact</span></a></li>
-							<!-- For external page link -->
-							<!-- <li><a href="http://freehtml5.co/" class="external">External</a></li> -->
-						</ul>
-					</div>
-				</div>
-
-			</div>
-		</nav>
-
-		<section id="gtco-hero" class="gtco-cover" style="background-image: url(images/cleaning_images/cleaning.webp);"
-			data-section="home" data-stellar-background-ratio="0.5">
-			<div class="overlay"></div>
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 col-md-offset-0 text-center">
-						<!-- <h1>TESTING</h1> -->
-						<div class="display-t">
-							<!-- <h1>NO ERRORS</h1> -->
-							<div class="display-tc">
-								<!-- <h1>COPILOT</h1> -->
-								<div><img
-										src="images/logo_superstar_cleaning_service/900_LOGO-SUPER-STAR-CLEANING (1).png"
-										class="img-center"></div>
+    <ion-icon
+      name="arrow-forward-outline"
+      aria-hidden="true"
+    ></ion-icon>
+  </a>
+</div>
 
 
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+                  <figure class="card-banner" data-reveal="left">
+                    <img
+                      src="./assets/images/service/service-1.jpg"
+                      width="600"
+                      height="367"
+                      loading="lazy"
+                      alt=" Super Star Cleaning Services Inc."
+                      class="w-100"
+                    />
+                  </figure>
+                </div>
+              </li>
 
-		<section id="gtco-about" data-section="about">
-			<div class="container">
-				<div class="row row-pb-md">
-					<div class="col-md-8 col-md-offset-2 heading animate-box" data-animate-effect="fadeIn">
-						<h1>Unwind in Your Oasis. We'll Handle the Rest.</h1>
-						<p class="sub">Your haven deserves professional care. Relax in a spotless space, knowing it's
-							cleaned with meticulous detail.</p>
-						<p class="subtle-text animate-box" data-animate-effect="fadeIn">SUPERSTAR</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-6 col-md-pull-1 animate-box" data-animate-effect="fadeInLeft">
-						<div class="img-shadow">
-							<img src="images/cleaning_images/balde_for_cleaning.jpg" class="img-responsive"
-								alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
-						</div>
-					</div>
-					<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-						<h2 class="heading-colored">Super Star Cleaning Services Inc. is Excellence &amp; Honesty</h2>
-						<p>A local and family-owned, house and office cleaning company located in Stafford County, VA.
-							We are more than 15 years in business, licensed registered and insured If you need your
-							house or
-							business cleaned. You can call us or use the contact form on this website.
-							We offer you a FREE estimate over the phone, on-site or online. Efficient teams of 1-3
-							people,
-							depending on the size of the project, will arrive on time ready to serve you. Due to Covid
-							19 we
-							are taking extensive measures to ensure your safety against the virus such as wearing
-							disposable gloves,
-							shoes, and masks for each service. We work Monday thru Fridays.
-							We understand taking care of your families can be a stressful job to take on, our goal is to
-							help you to
-							relieve some of that stress and lead on a more harmonious life with your family.
-						</p>
-						<!--<p><a href="#" class="read-more">Read more <i class="icon-chevron-right"></i></a></p>!-->
-					</div>
-				</div>
-			</div>
-		</section>
+              <li>
+                <div
+                  class="project-card project-card-3"
+                  style="background-color: #f5faf7"
+                >
+<div class="card-content" data-reveal="left">
+  <p class="card-tag" style="color: #7cb798">Super Star Cleaning Services Inc.</p>
 
-		<section id="gtco-practice-areas" data-section="practice-areas">
-			<div class="container">
-				<div class="row row-pb-md">
-					<div class="col-md-8 col-md-offset-2 heading animate-box" data-animate-effect="fadeIn">
-						<h1>Type of Services</h1>
-						<p class="sub">We provide Professional Home Cleaning Services including:</p>
-						<p class="subtle-text animate-box" data-animate-effect="fadeIn">Services</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-6">
-						<div class="gtco-practice-area-item animate-box">
-							<div class="row">
-								<div class="col-md-6 col-md-pull-1 animate-box" data-animate-effect="fadeInLeft">
-									<div class="img-shadow">
-										<img src="images/cleaning_images/deep house clean.jpg" class="img-responsive"
-											alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
-									</div>
-								</div>
-								<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-									<h2 class="heading-colored">One Time Deep House Cleaning</h2>
-									<!--<p><a href="#" class="read-more">Read more <i class="icon-chevron-right"></i></a></p>!-->
-								</div>
-							</div>
-						</div>
+  <h3 class="h3 card-title">Expert Cleaning Solutions</h3>
 
-						<div class="gtco-practice-area-item animate-box">
-							<div class="row">
-								<div class="col-md-6 col-md-pull-1 animate-box" data-animate-effect="fadeInLeft">
-									<div class="img-shadow">
-										<img src="images/cleaning_images/recurring_cleaning.jpg" class="img-responsive"
-											alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
-									</div>
-								</div>
-								<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-									<h2 class="heading-colored">Recurring House Cleaning</h2>
-									<!--<p><a href="#" class="read-more">Read more <i class="icon-chevron-right"></i></a></p>!-->
-								</div>
-							</div>
-						</div>
+  <p class="card-text">
+    Providing top-notch cleaning services for homes and offices with a focus on quality and customer satisfaction. Our experienced team uses advanced techniques and eco-friendly products to ensure a spotless environment. From regular maintenance to deep cleaning, we handle it all with professionalism and care.
+  </p>
+
+  <a href="#" class="btn-text" style="color: #7cb798">
+    <span class="span">See Service</span>
+
+    <ion-icon
+      name="arrow-forward-outline"
+      aria-hidden="true"
+    ></ion-icon>
+  </a>
+</div>
 
 
-					</div>
-					<div class="col-md-6">
+                  <figure class="card-banner" data-reveal="right">
+                    <img
+                      src="./assets/images/service/service-4.jpg"
+                      width="600"
+                      height="367"
+                      loading="lazy"
+                      alt=" Super Star Cleaning Services Inc."
+                      class="w-100"
+                    />
+                  </figure>
+                </div>
+              </li>
 
-						<div class="gtco-practice-area-item animate-box">
-							<div class="row">
-								<div class="col-md-6 col-md-pull-1 animate-box" data-animate-effect="fadeInLeft">
-									<div class="img-shadow">
-										<img src="images/cleaning_images/movinmoveout.webp" class="img-responsive"
-											alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
-									</div>
-								</div>
-								<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-									<h2 class="heading-colored">Move in / Move out Cleaning</h2>
-									<!--<p><a href="#" class="read-more">Read more <i class="icon-chevron-right"></i></a></p>!-->
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6">
+              <li>
+                <div
+                  class="project-card project-card-3"
+                  style="background-color: #f5faf7"
+                >
+                  <div class="card-content" data-reveal="left">
+                    <p class="card-tag" style="color: #7cb798">
+                      Cleaning Services
+                    </p>
 
-						<div class="gtco-practice-area-item animate-box">
-							<div class="row">
-								<div class="col-md-6 col-md-pull-1 animate-box" data-animate-effect="fadeInLeft">
-									<div class="img-shadow">
-										<img src="images/cleaning_images/Office-Cleaning.png" class="img-responsive"
-											alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
-									</div>
-								</div>
-								<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-									<h2 class="heading-colored">Office Cleaning</h2>
-									<!--<p><a href="#" class="read-more">Read more <i class="icon-chevron-right"></i></a></p>!-->
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+                    <h3 class="h3 card-title">Our Expert Services</h3>
 
-		<section id="gtco-our-team" data-section="our-team">
-			<div class="container">
-				<div class="row row-pb-md">
-					<div class="col-md-8 col-md-offset-2 heading animate-box" data-animate-effect="fadeIn">
-						<h1>Our Service Areas</h1>
-						<p><b>Payment Accepted: </b>ZELLE, $CASH, CHECK</p>
-						<p class="sub">We extend our cleaning services to different counties.</p>
-						<p class="subtle-text animate-box" data-animate-effect="fadeIn">Our Service Areas</p>
-					</div>
-				</div>
-				<div class="row team-item gtco-team-reverse">
-					<div class="col-md-6 col-md-push-7 animate-box" data-animate-effect="fadeInRight">
-						<div class="img-shadow">
-							<img src="/images/cleaning_images/balde_con_productos.jpeg" class="img-responsive"
-								alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
-						</div>
-					</div>
-					<div class="col-md-6  col-md-pull-6 animate-box" data-animate-effect="fadeInRight">
-						<h2>STAFFORD</h2>
-						<table class="tg">
-							<thead>
-								<tr>
-									<th class="tg-1wig">WORKING HOURS </th>
-									<th class="tg-0lax"> </th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td class="tg-0lax">Monday<span style="color:#000"> </span></td>
-									<td class="tg-0lax">8:30 am to 5:00<span style="color:#000"> </span></td>
-								</tr>
-								<tr>
-									<td class="tg-0lax">Tuesday<span style="color:#000"> </span></td>
-									<td class="tg-0lax">8:30 am to 5:00<span style="color:#000"> </span></td>
-								</tr>
-								<tr>
-									<td class="tg-0lax">Wednesday<span style="color:#000"> </span></td>
-									<td class="tg-0lax">8:30 am to 5:00<span style="color:#000"> </span></td>
-								</tr>
-								<tr>
-									<td class="tg-0lax">Thursday<span style="color:#000"> </span></td>
-									<td class="tg-0lax">8:30 am to 5:00<span style="color:#000"> </span></td>
-								</tr>
-								<tr>
-									<td class="tg-0lax">Friday<span style="color:#000"> </span></td>
-									<td class="tg-0lax">8:30 am to 5:00<span style="color:#000"> </span></td>
-								</tr>
-								<tr>
-									<td class="tg-0lax">Saturday <span style="color:#000"> </span></td>
-									<td class="tg-0lax">By appointment only<span style="color:#000"> </span></td>
-								</tr>
-								<tr>
-									<td class="tg-0lax">Sunday<span style="color:#000"> </span></td>
-									<td class="tg-0lax">Closed </td>
-									<td class="tg-0lax"> </td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
+                    <p class="card-text">
+                      At SUPERSTAR Cleaning Services INC., we offer top-notch
+                      cleaning solutions tailored to your needs. Our services
+                      include residential cleaning, commercial cleaning, carpet
+                      cleaning, and window cleaning. Experience the difference
+                      with our professional and thorough cleaning services.
+                    </p>
 
-				<div class="row team-item gtco-team">
-					<div class="col-md-6 col-md-pull-1 animate-box" data-animate-effect="fadeInLeft">
-						<div class="img-shadow">
-							<img src="images/cleaning_images/limpiando_grifo.jpeg" class="img-responsive"
-								alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
-						</div>
-					</div>
-					<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-						<h2>WOODBRIDGE</h2>
-						<table class="tg">
-							<thead>
-								<tr>
-									<th class="tg-1wig">WORKING HOURS </th>
-									<th class="tg-0lax"> </th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td class="tg-0lax">Monday<span style="color:#000"> </span></td>
-									<td class="tg-0lax">8:30 am to 5:00<span style="color:#000"> </span></td>
-								</tr>
-								<tr>
-									<td class="tg-0lax">Tuesday<span style="color:#000"> </span></td>
-									<td class="tg-0lax">8:30 am to 5:00<span style="color:#000"> </span></td>
-								</tr>
-								<tr>
-									<td class="tg-0lax">Wednesday<span style="color:#000"> </span></td>
-									<td class="tg-0lax">8:30 am to 5:00<span style="color:#000"> </span></td>
-								</tr>
-								<tr>
-									<td class="tg-0lax">Thursday<span style="color:#000"> </span></td>
-									<td class="tg-0lax">8:30 am to 5:00<span style="color:#000"> </span></td>
-								</tr>
-								<tr>
-									<td class="tg-0lax">Friday<span style="color:#000"> </span></td>
-									<td class="tg-0lax">8:30 am to 5:00<span style="color:#000"> </span></td>
-								</tr>
-								<tr>
-									<td class="tg-0lax">Saturday <span style="color:#000"> </span></td>
-									<td class="tg-0lax">By appointment only<span style="color:#000"> </span></td>
-								</tr>
-								<tr>
-									<td class="tg-0lax">Sunday<span style="color:#000"> </span></td>
-									<td class="tg-0lax">Closed </td>
-									<td class="tg-0lax"> </td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
+                    <a href="#" class="btn-text" style="color: #7cb798">
+                      <span class="span">Learn More</span>
 
-				<div class="row team-item gtco-team-reverse">
-					<div class="col-md-6 col-md-push-7 animate-box" data-animate-effect="fadeInRight">
-						<div class="img-shadow">
-							<img src="/images/cleaning_images/move-in-move-out-cleaning.jpg" class="img-responsive"
-								alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
-						</div>
-					</div>
-					<div class="col-md-6  col-md-pull-6 animate-box" data-animate-effect="fadeInRight">
-						<h2>FREDERICKSBURG V.A.</h2>
-						<table class="tg">
-							<thead>
-								<tr>
-									<th class="tg-1wig">WORKING HOURS </th>
-									<th class="tg-0lax"> </th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td class="tg-0lax">Monday<span style="color:#000"> </span></td>
-									<td class="tg-0lax">8:30 am to 5:00<span style="color:#000"> </span></td>
-								</tr>
-								<tr>
-									<td class="tg-0lax">Tuesday<span style="color:#000"> </span></td>
-									<td class="tg-0lax">8:30 am to 5:00<span style="color:#000"> </span></td>
-								</tr>
-								<tr>
-									<td class="tg-0lax">Wednesday<span style="color:#000"> </span></td>
-									<td class="tg-0lax">8:30 am to 5:00<span style="color:#000"> </span></td>
-								</tr>
-								<tr>
-									<td class="tg-0lax">Thursday<span style="color:#000"> </span></td>
-									<td class="tg-0lax">8:30 am to 5:00<span style="color:#000"> </span></td>
-								</tr>
-								<tr>
-									<td class="tg-0lax">Friday<span style="color:#000"> </span></td>
-									<td class="tg-0lax">8:30 am to 5:00<span style="color:#000"> </span></td>
-								</tr>
-								<tr>
-									<td class="tg-0lax">Saturday <span style="color:#000"> </span></td>
-									<td class="tg-0lax">By appointment only<span style="color:#000"> </span></td>
-								</tr>
-								<tr>
-									<td class="tg-0lax">Sunday<span style="color:#000"> </span></td>
-									<td class="tg-0lax">Closed </td>
-									<td class="tg-0lax"> </td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
+                      <ion-icon
+                        name="arrow-forward-outline"
+                        aria-hidden="true"
+                      ></ion-icon>
+                    </a>
+                  </div>
 
-			</div>
-		</section>
+                  <figure class="card-banner" data-reveal="right">
+                    <img
+                      src="./assets/images/service/service-6.jpg"
+                      width="600"
+                      height="367"
+                      loading="lazy"
+                      alt="Cleaning Services"
+                      class="w-100"
+                    />
+                  </figure>
+                </div>
+              </li>
 
-		<section id="gtco-contact" data-section="contact">
-			<div class="container">
-				<div class="row row-pb-md">
-					<div class="col-md-8 col-md-offset-2 heading animate-box" data-animate-effect="fadeIn">
-						<h1>Contact Us</h1>
-						<p class="sub">Contact SUPERSTAR Cleaning Services INC. to make your life brighter.</p>
-						<p class="subtle-text animate-box" data-animate-effect="fadeIn">Contact</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-6 col-md-push-6 animate-box">
-						<form action="#">
-							<div class="form-group">
-								<label for="name" class="sr-only">Name</label>
-								<input type="text" class="form-control" placeholder="Name" id="name">
-							</div>
-							<div class="form-group">
-								<label for="email" class="sr-only">Email</label>
-								<input type="text" class="form-control" placeholder="Email" id="email">
-							</div>
-							<div class="form-group">
-								<label for="message" class="sr-only">Message</label>
-								<textarea name="message" id="message" class="form-control" cols="30" rows="7"
-									placeholder="Message"></textarea>
-							</div>
-							<div class="form-group">
-								<input type="submit" value="Send Message" class="btn btn-primary">
-							</div>
-						</form>
-					</div>
-					<div class="col-md-4 col-md-pull-6 animate-box">
-						<div class="gtco-contact-info">
-							<ul>
-								<li class="address">Stafford , VA. 22554</li>
-								<li class="phone"><a href="tel://5404466947">+ (540) 446 6947</a></li>
-								<li class="email"><a
-										href="mailto:cleansuperstar@hotmail.com">cleansuperstar@hotmail.com</a></li>
-								<!--<li class="url"><a href="#">http://example.com</a></li>-->
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+              <li>
+                <div class="container">
+                  <h2 class="h2 section-title">Our Service Areas</h2>
 
-		<footer id="gtco-footer" role="contentinfo">
-			<div class="container">
+                  <p class="section-text">
+                    We extend our cleaning services to different counties,
+                    ensuring you receive quality service wherever you are.
+                  </p>
 
-				<div class="row copyright">
-					<div class="col-md-12">
-						<p class="pull-left">
-							<small class="block">&copy; Superstar Cleaning Services. All Rights Reserved.</small>
-							<!--<small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a></small>-->
-						</p>
-						<p class="pull-right">
-						<ul class="gtco-social-icons pull-right">
-							<li><a href="#"><i class="icon-twitter"></i></a></li>
-							<li><a href="#"><i class="icon-facebook"></i></a></li>
-							<li><a href="#"><i class="icon-linkedin"></i></a></li>
-							<li><a href="#"><i class="icon-dribbble"></i></a></li>
-						</ul>
-						</p>
-					</div>
-				</div>
+                  <table class="service-table">
+                    <thead>
+                      <tr>
+                        <th>County</th>
+                        <th>Service Available</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Stafford</td>
+                        <td>Yes</td>
+                      </tr>
+                      <!-- Add more counties as needed -->
+                    </tbody>
+                  </table>
 
-			</div>
-		</footer>
-	</div>
+                  <h3 class="h3 hours-title">Working Hours</h3>
+                  <table class="hours-table" aria-hidden="true" role="presentation">
+                    <tbody>
+                      <tr>
+                        <td>Monday</td>
+                        <td>8:30 am to 5:00 pm</td>
+                      </tr>
+                      <tr>
+                        <td>Tuesday</td>
+                        <td>8:30 am to 5:00 pm</td>
+                      </tr>
+                      <tr>
+                        <td>Wednesday</td>
+                        <td>8:30 am to 5:00 pm</td>
+                      </tr>
+                      <tr>
+                        <td>Thursday</td>
+                        <td>8:30 am to 5:00 pm</td>
+                      </tr>
+                      <tr>
+                        <td>Friday</td>
+                        <td>8:30 am to 5:00 pm</td>
+                      </tr>
+                      <tr>
+                        <td>Saturday</td>
+                        <td>By appointment only</td>
+                      </tr>
+                      <tr>
+                        <td>Sunday</td>
+                        <td>Closed</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </li>
 
-	<div class="gototop js-top">
-		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
-	</div>
+              <style>
+                .service-areas {
+                  margin-top: 2rem;
+                }
 
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Stellar -->
-	<script src="js/jquery.stellar.min.js"></script>
-	<!-- Magnific Popup -->
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/magnific-popup-options.js"></script>
-	<!-- Main -->
-	<script src="js/main.js"></script>
+                .service-table,
+                .hours-table {
+                  width: 100%;
+                  border-collapse: collapse;
+                  margin-top: 1rem;
+                }
 
-</body>
+                .service-table th,
+                .service-table td,
+                .hours-table th,
+                .hours-table td {
+                  border: 1px solid #ccc;
+                  padding: 0.5rem;
+                  text-align: left;
+                }
 
+                .payment-list {
+                  list-style-type: none;
+                  padding: 0;
+                  margin-top: 1rem;
+                }
+
+                .payment-list li {
+                  margin: 0.5rem 0;
+                }
+
+                .section-title,
+                .payment-title,
+                .hours-title {
+                  margin-top: 2rem;
+                }
+              </style>
+
+<li>
+  <div
+    class="project-card project-card-4"
+    style="background-color: #fcf4f6"
+  >
+    <div class="card-content" data-reveal="left">
+      <p class="card-tag" style="color: #4a90e2">Cleaning Service</p>
+
+      <h3 class="h3 card-title">Cleaning and Maintenance</h3>
+
+      <p class="card-text">
+        We offer professional cleaning services for offices, homes, and commercial spaces. Our team is trained to ensure a clean and healthy environment using eco-friendly products and advanced techniques.
+      </p>
+
+      <a href="#" class="btn-text" style="color: #4a90e2">
+        <span class="span">See Service</span>
+
+        <ion-icon
+          name="arrow-forward-outline"
+          aria-hidden="true"
+        ></ion-icon>
+      </a>
+    </div>
+
+    <figure class="card-banner" data-reveal="right">
+      <img
+        src="./assets/images/service/service-cleaning.jpg"
+        width="620"
+        height="370"
+        loading="lazy"
+        alt="Cleaning Service"
+        class="w-100"
+      />
+    </figure>
+  </div>
+</li>
+
+            </ul>
+          </div>
+        </section>
+
+        <!-- 
+        - #ABOUT
+      -->
+
+<section class="section about" aria-label="about">
+  <div class="container">
+    <ul class="grid-list">
+      <li data-reveal="bottom">
+        <div class="about-card">
+          <div class="card-icon">
+            <img
+              src="./assets/images/icon-1.svg"
+              width="52"
+              height="52"
+              loading="lazy"
+              alt="residential cleaning icon"
+            />
+          </div>
+
+          <h3 class="h4 card-title">Residential Cleaning</h3>
+
+          <p class="card-text">
+            We offer comprehensive residential cleaning services to ensure your
+            home is spotless and comfortable. From regular cleaning schedules to
+            one-time deep cleans, we've got you covered.
+          </p>
+        </div>
+      </li>
+
+      <li data-reveal="bottom" data-reveal-delay="0.25s">
+        <div class="about-card">
+          <div class="card-icon">
+            <img
+              src="./assets/images/icon-2.svg"
+              width="52"
+              height="52"
+              loading="lazy"
+              alt="commercial cleaning icon"
+            />
+          </div>
+
+          <h3 class="h4 card-title">Commercial Cleaning</h3>
+
+          <p class="card-text">
+            Our commercial cleaning services ensure a clean and healthy
+            environment for your business. We tailor our services to meet your
+            specific needs, maintaining a professional appearance for your
+            workspace.
+          </p>
+        </div>
+      </li>
+
+      <li data-reveal="bottom" data-reveal-delay="0.5s">
+        <div class="about-card">
+          <div class="card-icon">
+            <img
+              src="./assets/images/icon-3.svg"
+              width="52"
+              height="52"
+              loading="lazy"
+              alt="carpet cleaning icon"
+            />
+          </div>
+
+          <h3 class="h4 card-title">Carpet Cleaning</h3>
+
+          <p class="card-text">
+            Our carpet cleaning services remove dirt, stains, and allergens,
+            leaving your carpets fresh and clean. We use the latest equipment and
+            techniques to ensure the best results.
+          </p>
+        </div>
+      </li>
+
+      <li data-reveal="bottom" data-reveal-delay="0.75s">
+        <div class="about-card">
+          <div class="card-icon">
+            <img
+              src="./assets/images/icon-4.svg"
+              width="52"
+              height="52"
+              loading="lazy"
+              alt="window cleaning icon"
+            />
+          </div>
+
+          <h3 class="h4 card-title">Window Cleaning</h3>
+
+          <p class="card-text">
+            We offer professional window cleaning services for both residential
+            and commercial properties. Our team ensures streak-free, crystal-clear
+            windows every time.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+        <!-- 
+        - #CONTACT
+      -->
+
+        <section class="section contact" aria-label="contact">
+          <div class="container">
+            <div class="contact-card">
+              <div class="contact-content" data-reveal="left">
+                <div class="card-icon">
+                  <img
+                    src="./assets/images/icon-5.svg"
+                    width="44"
+                    height="44"
+                    loading="lazy"
+                    alt="envelop icon"
+                  />
+                </div>
+                <h2 class="h2 section-title" style="color: #ffff">
+                  Contact Us
+                </h2>
+                <p class="section-text" style="color: #ffff">
+                  Get in touch with SUPERSTAR Cleaning Services INC. to make
+                  your life brighter. Have any questions? Fill out this contact
+                  form and we will get back to you shortly.
+                </p>
+              </div>
+              <form action="" class="contact-form" data-reveal="right">
+                <div class="input-wrapper">
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Name *"
+                    required
+                    class="input-field"
+                  />
+                  <input
+                    type="email"
+                    name="email_address"
+                    placeholder="Email *"
+                    required
+                    class="input-field"
+                  />
+                </div>
+                <textarea
+                  name="message"
+                  placeholder="Message *"
+                  required
+                  class="input-field"
+                ></textarea>
+                <button
+                  type="submit"
+                  class="btn btn-secondary"
+                  style="color: #ffff"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <!-- 
+    - #FOOTER
+  -->
+
+    <!-- WhatsApp Button -->
+    <a
+      href="https://wa.me/15404466947?text=I+want+to+acquire+the+cleaning+service&type=phone_number&app_absent=0"
+      target="_blank"
+      class="whatsapp-button"
+      aria-label="Chat with us on WhatsApp"
+    >
+      <i class="fab fa-whatsapp whatsapp-icon"></i>
+    </a>
+    <div class="tooltip">I want to acquire the cleaning service</div>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="copyright">
+          © 2024 SUPERSTAR Cleaning Services INC. All rights reserved.
+        </p>
+
+        <ul class="social-list">
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-dribbble"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- 
+    - custom js link
+  -->
+    <script src="./assets/js/script.js"></script>
+
+    <!-- 
+    - ionicon link
+  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>
