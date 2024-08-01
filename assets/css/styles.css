@@ -11,7 +11,7 @@
   --white_a8: #001f4a;
   --white_a12: #001f4a;
   --cultured: hsla(220, 20%, 97%, 1);
-  --snow: #001F4A;
+  --snow: #001f4a;
   --manatee: hsla(219, 10%, 62%, 1);
   --black-coral: hsla(220, 12%, 43%, 1);
   --cadet-blue-crayola_a20: hsla(222, 23%, 71%, 0.2);
@@ -459,6 +459,46 @@ body.nav-active {
   justify-content: center;
   align-items: center;
   gap: 12px;
+}
+
+/*-----------------------------------*\
+  #SERVICES TABLE DISEÑO
+\*-----------------------------------*/
+
+.service-areas {
+  margin-top: 2rem;
+}
+
+.service-table,
+.hours-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.service-table th,
+.service-table td,
+.hours-table th,
+.hours-table td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.payment-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.payment-list li {
+  margin: 0.5rem 0;
+}
+
+.section-title,
+.payment-title,
+.hours-title {
+  margin-top: 2rem;
 }
 
 /*-----------------------------------*\
