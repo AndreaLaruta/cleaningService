@@ -187,6 +187,13 @@ body.nav-active {
   width: 100%;
 }
 
+.w-50 {
+  width: 70%;
+  text-align: center;
+  display: flex;
+      justify-content: center;
+}
+
 .h1,
 .h2,
 .h3,
@@ -229,7 +236,7 @@ body.nav-active {
 
 .btn-primary,
 .btn-secondary:is(:hover, :focus-visible) {
-  background-color: var(--cinnamon-satin);
+  background-color: var(--white_a8);
   color: var(--white);
 }
 
@@ -626,7 +633,7 @@ body.nav-active {
 }
 
 .contact-card {
-  background-color: var(--snow);
+  background-color: var(--gunmetal);
   padding: 32px;
   border-radius: var(--radius-8);
   display: grid;
@@ -919,6 +926,11 @@ textarea.input-field {
   :is(.project-card-1, .project-card-2) .card-banner {
     width: 66.66%;
   }
+  :is(.project-card-1, .project-card-2) .card-banner-states {
+    width: 50%;
+    display: flex;
+      justify-content: center;
+  }
 
   .project-card-1 .card-content {
     padding-block-end: var(--padding);
@@ -1065,4 +1077,13 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+}
+
+img {
+  border-radius: 2%;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
 }
