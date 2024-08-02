@@ -8,18 +8,18 @@
    */
 
   --white: hsla(0, 0%, 100%, 1);
-  --white_a8: #001f4a;
-  --white_a12: #001f4a;
-  --cultured: hsla(220, 20%, 97%, 1);
-  --snow: #001f4a;
-  --manatee: hsla(219, 10%, 62%, 1);
-  --black-coral: hsla(220, 12%, 43%, 1);
+  --white_a8: #bc0c24;
+  --white_a12: #041c4c;
+  --cultured: #a87a8d;
+  --snow: #596d89;
+  --manatee: #3d5374;
+  --black-coral: #2b4469;
   --cadet-blue-crayola_a20: hsla(222, 23%, 71%, 0.2);
-  --cinnamon-satin: #bb0823;
-  --raisin-black: hsla(216, 14%, 14%, 1);
-  --raisin-black_a6: hsla(216, 14%, 14%, 0.06);
-  --gunmetal: hsla(214, 15%, 21%, 1);
-  --charcoal: hsla(219, 22%, 26%, 1);
+  --cinnamon-satin: #bc0c24;
+  --raisin-black:#3c547c;
+  --raisin-black_a6: #0c244c;
+  --gunmetal: #1c3c5c;
+  --charcoal: #112e56;
 
   /**
    * typography
@@ -212,7 +212,7 @@ body.nav-active {
 }
 
 .btn {
-  color: var(--cinnamon-satin);
+  color: #741034;
   font-size: var(--fs-6);
   font-weight: var(--fw-700);
   border: 2px solid var(--cinnamon-satin);
@@ -404,7 +404,7 @@ body.nav-active {
       /* Color blanco con opacidad del 70% */ rgba(0, 0, 0, 0.7)
         /* Mismo color para la compatibilidad */
     ),
-    url("../images/banner.webp");
+  /*  url("../images/banner.webp");*/
   /* Ruta de tu imagen de fondo */
 
   /* Ajuste del padding */
@@ -412,7 +412,7 @@ body.nav-active {
   padding-bottom: calc(var(--section-padding) + 10px);
 
   /* Color de fondo por defecto */
-  /* background-color: var(--cultured); */
+  background-color: var(--white);
   /* Color de fondo de respaldo */
 }
 
