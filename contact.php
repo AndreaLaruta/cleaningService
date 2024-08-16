@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
   // Configuración del correo
-  $to = "pericena12@gmail.com"; // Reemplaza con tu dirección de correo
+  $to = "correo@gmial.com"; // Reemplaza con tu dirección de correo
   $subject = "Nuevo mensaje de contacto de $name";
   $email_body = "Has recibido un nuevo mensaje de contacto.\n\n" .
     "Nombre: $name\n" .
