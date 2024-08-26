@@ -1090,6 +1090,9 @@ textarea.input-field {
   font-size: 30px;
 }
 
+
+/*For the table of Working Hours*/
+
 /* Tooltip container */
 .tooltip {
   position: fixed;
@@ -1127,3 +1130,37 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.centered-table {
+  border-collapse: collapse;
+  width: 50%;
+  background-color: #ffffff;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.centered-table th, .centered-table td {
+  border: 1px solid #dddddd;
+  padding: 8px 12px;
+}
+
+.centered-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+/*End for the table of Working Hours*/
