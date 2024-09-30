@@ -38,5 +38,5 @@ $mailer->CharSet = 'UTF-8';
 
 $rta = $mailer->send( );
 
-var_dump($rta);
+var_dump($rta, $nombre, $email, $phone);
 //header("Location: gracias.html" );
