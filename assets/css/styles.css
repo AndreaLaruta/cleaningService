@@ -194,6 +194,7 @@ body.nav-active {
   justify-content: center;
 }
 
+
 .h1,
 .h2,
 .h3,
@@ -445,6 +446,22 @@ body.nav-active {
   mask-size: auto;
   -webkit-mask-size: auto;
 }
+
+@media (max-width: 768px) { 
+  .hero-banner .w-100 {
+    mask-image: url("../images/Blob.svg");
+    -webkit-mask-image: url("../images/Blob.svg");
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-position: center;
+    mask-size: contain; 
+    -webkit-mask-size: contain;
+    width: 100%; 
+    height: auto; 
+  }
+}
+
 
 .hero .shape {
   position: absolute;
