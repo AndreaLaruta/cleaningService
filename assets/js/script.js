@@ -70,3 +70,13 @@ for (let i = 0, len = revealDelayElements.length; i < len; i++) {
 
 window.addEventListener("scroll", reveal);
 window.addEventListener("load", reveal);
+
+
+/*Para el dropdown menu*/
+const dropdownButton = document.querySelector('button');
+const dropdownMenu = document.querySelector('.dropdown-menu');
+
+dropdownButton.addEventListener('click', () => {
+  dropdownMenu.classList.toggle('show');
+});
+/*Para el dropdown menu*/
