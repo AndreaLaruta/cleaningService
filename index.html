@@ -558,6 +558,7 @@
               <div id="success-message" class="hidden text-white text-sm mt-2" style="color:#ffff">Your message has been
                 sent successfully!</div>
             </form>
+
           </div>
         </div>
       </section>
@@ -612,93 +613,94 @@
 
 
 <style>
-  /* menú */
-  .navbar {
-    padding: 15px 20px;
+/* menú */
+.navbar {
+  padding: 15px 20px;
+}
+
+.navbar-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.navbar-link {
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.navbar-item.has-submenu {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  padding-left: 20px;/
+}
+
+.submenu li {
+  padding: 8px 0;
+}
+
+.navbar-item.has-submenu.active .submenu {
+  display: block;
+  animation: slide-down 0.3s ease-out;
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
   }
 
-  .navbar-list {
-    list-style-type: none;
-    padding-left: 0;
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
-
-  .navbar-link {
-    text-decoration: none;
-    padding: 10px;
-    display: block;
-    transition: background-color 0.3s;
-  }
-
-  .navbar-item.has-submenu {
-    position: relative;
-  }
-
-  .submenu {
-    display: none;
-    padding-left: 20px;/
-  }
-
-  .submenu li {
-    padding: 8px 0;
-  }
-
-  .navbar-item.has-submenu.active .submenu {
-    display: block;
-    animation: slide-down 0.3s ease-out;
-  }
-
-  @keyframes slide-down {
-    from {
-      transform: translateY(-10px);
-      opacity: 0;
-    }
-
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
+}
 </style>
 
 <script>
-  const submenuItems = document.querySelectorAll('.navbar-item.has-submenu');
-  submenuItems.forEach(item => {
-    const submenuLink = item.querySelector('a');
-    submenuLink.addEventListener('click', function (e) {
-      e.preventDefault();
-      item.classList.toggle('active');
-    });
+const submenuItems = document.querySelectorAll('.navbar-item.has-submenu');
+submenuItems.forEach(item => {
+  const submenuLink = item.querySelector('a');
+  submenuLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    item.classList.toggle('active');
   });
+});
 
-  document.addEventListener('click', function (e) {
-    if (!e.target.closest('.navbar') && !e.target.closest('.navbar-item.has-submenu')) {
-      submenuItems.forEach(item => {
-        item.classList.remove('active');
-      });
-    }
-  });
-
-  submenuItems.forEach(item => {
-    item.addEventListener('click', function (e) {
-      e.stopPropagation();
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.navbar') && !e.target.closest('.navbar-item.has-submenu')) {
+    submenuItems.forEach(item => {
+      item.classList.remove('active');
     });
+  }
+});
+
+submenuItems.forEach(item => {
+  item.addEventListener('click', function(e) {
+    e.stopPropagation();
   });
+});
 </script>
 
 <!-- reCAPTCHA -->
 <script>
-  document.getElementById('contact-form').addEventListener('submit', function (event) {
-    const recaptchaResponse = grecaptcha.getResponse();
-    if (!recaptchaResponse) {
-      event.preventDefault();
-      document.getElementById('captcha-error').classList.remove('hidden');
-    } else {
-      document.getElementById('captcha-error').classList.add('hidden');
-      document.getElementById('success-message').classList.remove('hidden');
-    }
-  });
-  function onRecaptchaSuccess() {
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+  const recaptchaResponse = grecaptcha.getResponse();
+  if (!recaptchaResponse) {
+    event.preventDefault();
+    document.getElementById('captcha-error').classList.remove('hidden');
+  } else {
     document.getElementById('captcha-error').classList.add('hidden');
-    document.getElementById('submit-button').disabled = false;
+    document.getElementById('success-message').classList.remove('hidden');
   }
+});
+
+function onRecaptchaSuccess() {
+  document.getElementById('captcha-error').classList.add('hidden');
+  document.getElementById('submit-button').disabled = false;
+}
 </script>

@@ -35,11 +35,13 @@ $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
 $recaptcha_verify = file_get_contents($recaptcha_url . '?secret=' . $recaptcha_secret . '&response=' . $recaptcha_response);
 $recaptcha_result = json_decode($recaptcha_verify, true);
 
-if (!$recaptcha_result['success']) {
-  echo "Error: reCAPTCHA validation failed.";
-  ob_end_flush();
-  exit();
-}
+// You can choose to always send the email regardless of reCAPTCHA verification
+// Comment out or remove the following block if you always want to send the email
+// if (!$recaptcha_result['success']) {
+//     // Redirect with an error parameter for failed reCAPTCHA
+//     header("Location: index.php?error=recaptcha_failed");
+//     exit();
+// }
 
 // Email body
 $body = <<<HTML
@@ -77,14 +79,19 @@ try {
 
   // Send email
   if ($mailer->send()) {
-    header("Location: index.html");
+    // Redirect to index.html with a success message
+    header("Location: index.html?success=true");
     exit();
   } else {
-    echo "Error: Unable to send the email.";
+    // Redirect to index.html with an email sending failure error
+    header("Location: index.html?error=email_failed");
+    exit();
   }
 } catch (Exception $e) {
   error_log("PHPMailer Error: {$mailer->ErrorInfo}");
-  echo "Error: Something went wrong while sending your message.";
+  // Redirect to index.html with an email sending failure error
+  header("Location: index.html?error=email_failed");
+  exit();
 }
 
 // Clean output buffer
