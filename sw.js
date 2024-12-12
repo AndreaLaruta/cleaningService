@@ -1,78 +1,75 @@
-const CACHE_NAME = 'app';
-
-// URLs que deben ser cacheadas
+const CACHE_NAME = 'v1_pwa_app_cache';
 const urlsToCache = [
   'assets/images/logo/logo.png',
-  'assets/images/.*',  // Regex para imágenes
+  'assets/images/.*',
 ];
 
 // Evento de instalación del Service Worker
-self.addEventListener('install', async (e) => {
-  try {
-    const cache = await caches.open(CACHE_NAME);
-    await cache.addAll(urlsToCache);
-    self.skipWaiting();
-  } catch (err) {
-    console.error('Error al instalar el service worker:', err);
-  }
+self.addEventListener("install", (e) => {
+  // No almacenamos nada en el caché durante la instalación
+  e.waitUntil(self.skipWaiting());
 });
 
 // Evento de activación del Service Worker
-self.addEventListener('activate', async (e) => {
+self.addEventListener('activate', e => {
   const cacheWhitelist = [CACHE_NAME];
-  try {
-    const cacheNames = await caches.keys();
-    await Promise.all(
-      cacheNames.map(cacheName => {
-        if (!cacheWhitelist.includes(cacheName)) {
-          return caches.delete(cacheName);
-        }
+  e.waitUntil(
+    caches.keys()
+      .then(cacheNames => {
+        return Promise.all(
+          cacheNames.map(cacheName => {
+            // Eliminar todos los cachés que no estén en la lista blanca
+            if (cacheWhitelist.indexOf(cacheName) === -1) {
+              return caches.delete(cacheName);
+            }
+          })
+        );
       })
-    );
-    self.clients.claim();
-  } catch (err) {
-    console.error('Error al activar el service worker:', err);
-  }
-});
-
-// Evento de interceptación de solicitudes de red
-self.addEventListener('fetch', (e) => {
-  e.respondWith(
-    (async () => {
-      try {
-        const cachedResponse = await caches.match(e.request);
-        if (cachedResponse) {
-          return cachedResponse;
-        }
-        const networkResponse = await fetch(e.request);
-        if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') {
-          return networkResponse;
-        }
-        const responseClone = networkResponse.clone();
-        const cache = await caches.open(CACHE_NAME);
-        cache.put(e.request, responseClone);
-        return networkResponse;
-      } catch (err) {
-        console.error('Error al buscar recurso:', err);
-        // Notificación a los clientes si hay un fallo
-        self.clients.matchAll().then(clients => {
-          clients.forEach(client => {
-            client.postMessage('¡Hubo un error al solicitar recursos!');
-          });
-        });
-        throw err; // Re-lanzar el error para que pueda ser manejado adecuadamente
-      }
-    })()
+      .then(() => self.clients.claim()) // Activar el service worker de inmediato
   );
 });
 
-// Evento de mensaje para manejar errores específicos o acciones desde la interfaz
-self.addEventListener('message', (event) => {
-  if (event.data === 'Falló algo al solicitar recursos') {
-    // Mostrar notificación o ventana de error al usuario
-    // Por ejemplo, usar Push API o mostrar un mensaje en el navegador
-    self.registration.showNotification('Error', {
-      body: 'Hubo un problema al solicitar recursos de la red.',
-    });
+// Evento de interceptación de solicitudes de red
+self.addEventListener('fetch', e => {
+  e.respondWith(
+    // No hacemos nada con el caché, simplemente buscamos en la red
+    fetch(e.request)
+      .then(response => {
+        if (!response || response.status !== 200 || response.type !== 'basic') {
+          return response; // Si la respuesta no es válida, retornamos tal cual
+        }
+
+        // Retornar la respuesta directamente sin cachearla
+        return response;
+      })
+      .catch(err => {
+        console.log('Falló algo al solicitar recursos:', err);
+        self.clients.matchAll().then(clients => {
+          clients.forEach(client => {
+            client.postMessage('Falló algo al solicitar recursos');
+          });
+        });
+      })
+  );
+});
+
+// Evento para escuchar la actualización de contenido y forzar la recarga
+self.addEventListener('sync', (event) => {
+  if (event.tag === 'update') {
+    event.waitUntil(
+      caches.open(CACHE_NAME)
+        .then(cache => {
+          // Aquí no estamos almacenando nada en la caché
+        })
+    );
   }
 });
+
+// En el cliente (página web) escuchar la actualización de caché
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.addEventListener('message', event => {
+    if (event.data.action === 'reload') {
+      window.location.reload();
+    }
+  });
+}

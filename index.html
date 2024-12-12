@@ -6,59 +6,37 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SUPERSTAR CLEANING SERVICES INC.</title>
-  <link rel="icon" sizes="57x57" href="favicon.ico">
+  <!-- Favicon -->
+  <link rel="icon" sizes="57x57" href="favicon.ico" />
+  <link rel="shortcut icon" href="assets/images/logo/logo.png" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="assets/images/logo/logo.png" />
+  <link rel="apple-touch-startup-image" href="assets/images/logo/logo.png" />
+
+  <!-- Descripción y Optimización SEO -->
   <meta name="title" content="SUPERSTAR - Professional Cleaning Services." />
   <meta name="description"
     content="SUPERSTAR Cleaning Services INC. provides top-notch cleaning services to make your home or office sparkle." />
+  <!-- Tema de color en dispositivos móviles -->
+  <meta name="theme-color" content="#A7D8FF" />
+  <!-- Metaetiquetas de optimización móvil -->
+  <meta name="MobileOptimized" content="width" />
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
   <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./assets/css/styles.css" />
+  <!-- Preload de imágenes -->
   <link rel="preload" as="image" href="./assets/images/hero-banner.jpg" />
-  <link rel="preload" as="image" href="./assets/images/cleaning-service.jpg" />
-
-  
-
-    <!-- Metaetiqueta para el color de tema en dispositivos móviles -->
-    <meta name="theme-color" content="#A7D8FF" />
-    <!-- Metaetiquetas para optimización móvil -->
-    <meta name="MobileOptimized" content="width" />
-    <meta name="HandheldFriendly" content="true" />
-
-    <!-- Metaetiqueta para habilitar la instalación como una aplicación web en dispositivos móviles -->
-    <meta name="mobile-web-app-capable" content="yes" />
-
-    <!-- Metaetiqueta para personalizar la barra de estado en dispositivos iOS -->
-    <meta
-      name="apple-mobile-web-app-status-bar-style"
-      content="black-translucent"
-    />
-
-    <!-- Icono de acceso directo en la barra de tareas y en dispositivos iOS -->
-    <link
-      rel="shortcut icon"
-      type="image/png"
-      href="assets/images/logo/logo.png"
-    />
-    <link rel="apple-touch-icon" href="assets/images/logo/logo.png" />
-
-    <!-- Imagen de inicio en dispositivos iOS -->
-    <link rel="apple-touch-startup-image" href="assets/images/logo/logo.png" />
-
-    <!-- Archivo de manifiesto de la aplicación web -->
-    <link rel="manifest" href="./manifest.json" />
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="assets/images/logo/logo.png"
-      type="image/x-icon"
-    />
-
-
+  <link rel="preload" as="image" href="./assets/images/logo/logo.png" />
+  <script src="assets/js/script_pwa.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <!-- Manifiesto de la aplicación web -->
+  <link rel="manifest" href="./manifest.json" />
 </head>
-
- <script src="js/script_pwa.js"></script>
 
 <body>
   <!-- 
@@ -70,7 +48,6 @@
       <a href="#" class="logo">
         <img src="./assets/images/logo/logo.png" width="100" height="100" alt="SUPERSTAR" />
       </a>
-
       <!-- Navbar -->
       <nav class="navbar" data-navbar>
         <div class="navbar-top">
@@ -83,26 +60,31 @@
             <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
           </button>
         </div>
-
         <!-- Navbar List -->
         <ul class="navbar-list">
           <li><a href="#" class="navbar-link">Home</a></li>
           <li><a href="#about" class="navbar-link">About Us</a></li>
           <li><a href="#our_services" class="navbar-link">Our Services</a></li>
-          <li><a href="#our_quality" class="navbar-link">Quality Clean</a></li>
-          <li><a href="#selection_our_service_areas" class="navbar-link">Our Service Areas</a></li>
+          <!-- <li><a href="#our_quality" class="navbar-link">Quality Clean</a></li>
+          <li><a href="#selection_our_service_areas" class="navbar-link">Our Service Areas</a></li> -->
           <li><a href="#type-of-service-section" class="navbar-link">Type of Services</a></li>
           <li><a href="#section_working_hours" class="navbar-link">Working Hours</a></li>
-          <li><a href="#payment_methods" class="navbar-link">Payment Methods</a></li>
           <li><a href="#contact-section" class="navbar-link">Contact</a></li>
-        </ul>
 
+          <!-- Submenu-->
+          <li class="navbar-item has-submenu">
+            <a href="javascript:void(0);" class="navbar-link">Services</a>
+            <ul class="submenu">
+              <li><a href="#our_quality" class="navbar-link">Quality Clean</a></li>
+              <li><a href="#selection_our_service_areas" class="navbar-link">Our Service Areas</a></li>
+            </ul>
+          </li>
+        </ul>
         <!-- Contact Links -->
         <div class="wrapper">
           <a href="mailto:info@email.com" class="contact-link">info@email.com</a>
           <a href="tel:001234567890" class="contact-link">00 (123) 456 78 90</a>
         </div>
-
         <!-- Social Links -->
         <ul class="social-list">
           <li>
@@ -117,17 +99,14 @@
           </li>
         </ul>
       </nav>
-
       <!-- Open Menu Button -->
       <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
         <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
       </button>
-
       <!-- Overlay -->
       <div class="overlay" data-nav-toggler data-overlay></div>
     </div>
   </header>
-
 
   <main>
     <!-- 
@@ -137,10 +116,8 @@
       <div class="container">
         <!-- Hero Banner -->
         <figure class="hero-banner">
-            <img src="./assets/images/logo/logo.png" alt="SUPERSTAR" class="w-100"
-            data-reveal="top" />
+          <img src="./assets/images/logo/logo.png" alt="SUPERSTAR" class="w-100" data-reveal="top" />
         </figure>
-
         <!-- Hero Content -->
         <div class="hero-content">
           <h1 class="h1 hero-title" style="color: #041c4b" data-reveal="top" data-reveal-delay="0.5s">
@@ -161,242 +138,217 @@
     </section>
 
     <!-- 
-        - #PROJECT
+        - #bout Supertar Cleaning Services Inc.
       -->
-<section class="section project" aria-labelledby="project-label" id="about">
-  
+    <section class="section project" aria-labelledby="project-label" id="about">
 
-
-  <div class="container">
-    <!-- Title Wrapper -->
-    <div class="title-wrapper" data-reveal="top">
-      <div>
-        <h2 class="h2 section-title" id="project-label">
-          About Supertar Cleaning Services Inc.
-        </h2>
-      </div>
-    </div>
-
-    <!-- Grid List -->
-    <ul class="grid-list">
-      <!-- Project Card 1 -->
-      <li>
-        <div class="project-card project-card-1" style="background-color: #f8f5fb">
-          <div class="card-content" data-reveal="left">
-            <p class="card-tag" style="color: #bb0823">
-              OUR HISTORY AND OUR MISSION
-            </p>
-            <h3 class="h3 card-title">
-              Super Star Cleaning Services Inc. is Excellence & Honesty
-            </h3>
-            <p class="card-text">
-              A local and family-owned, house and office cleaning
-              company located in Stafford County, VA. We are more than
-              15 years in business, licensed registered and insured. If
-              you need your house or office cleaned. You can call us
-              or use the contact form on this website.<br><br>
-              We offer you a FREE estimate over the phone, on-site or online.
-              Efficient teams of 1-3 people, depending on the size of the project,
-              will arrive on time ready to serve you. Due to Covid 19 we
-              are taking extensive measures to ensure your safety
-              against the virus such as wearing disposable gloves,
-              shoes, and masks for each service.<br><br>We work Monday through
-              Fridays. We understand taking care of your families can be
-              a stressful job to take on, our goal is to help you to
-              relieve some of that stress and lead on a more harmonious
-              life with your family.
-            </p>
-            <a href="#" class="btn-text" style="color: #bb0823" id="type-of-service-section">
-              <span class="span">See Services</span>
-              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-            </a>
-          </div>
-          <figure class="card-banner" data-reveal="right">
-            <img
-              src="./assets/images/service/service-1edited.jpg"
-              width="400"
-              height="400"
-              loading="lazy"
-              alt="Super Star Cleaning Services Inc."
-              class="w-100"
-            />
-            <br><br>
-            <img
-              src="./assets/images/service/service-4edited.jpeg"
-              width="500"
-              height="500"
-              loading="lazy"
-              alt="Super Star Cleaning Services Inc."
-              class="w-100"
-            />
-            <br><br>
-          </figure>
-        </div>
-      </li>
-
-      <!-- Project Card 2 -->
-      <li>
-        <div class="project-card project-card-2" style="background-color: #596d89">
-          <div class="card-content" data-reveal="right">
-            <p class="card-tag" style="color: #041c4c">
-              Our services
-            </p>
-            <h3 class="h3 card-title" style="color: #ffffff">
-              Professional Cleaning Service
-            </h3>
-            <p class="card-text" style="color: #ffffff">
-              All your needs are important to us, and Super Star House Cleaning
-              wants to make having a clean house as easy as possible for you.
-              The convenience of our services goes beyond that.
-              We provide all of our own equipment and supplies to clean and disinfect the surfaces,
-              so you don’t have to worry about providing them, unless you wish to use your own supplies (Supplies
-              are thoroughly disinfected for each service provided by us).<br><br>
-              We can accommodate special instructions
-              to give you the clean house you desire and try to send the same ladies to do the work every time, so
-              you know who to expect.<br><br>
-            </p>
-            <a class="btn-text" style="color: #041c4c">
-              <span class="span">See Type of Services</span>
-              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-            </a>
-          </div>
-          <figure class="card-banner" data-reveal="right">
-            <img
-              src="./assets/images/service/service-5edited.jpg"
-              width="600"
-              height="367"
-              loading="lazy"
-              alt="Super Star Cleaning Services Inc."
-              class="w-100"
-            />
-            <br><br>
-            <img
-              src="./assets/images/service/service-4edited.jpg"
-              width="600"
-              height="367"
-              loading="lazy"
-              alt="Super Star Cleaning Services Inc."
-              class="w-100"
-            />
-          </figure>
-        </div>
-      </li>
-
-      <!-- Project Card 3 -->
-      <li>
-        <div class="project-card project-card-3" style="background-color: #a87a8d" id="our_quality">
-          <div class="card-content" data-reveal="left">
-            <p class="card-tag" style="color: #112e56">
-              As a Professional Cleaning Service
-            </p>
-            <h3 class="h3 card-title" style="color: #ffffff">
-              We are committed to a job well done
-            </h3>
-            <p class="card-text" style="color: #ffffff">
-              If you are not completely satisfied and thrilled with the
-              cleaning job, notify us within 24 hours, and we will send someone back to re-clean that area of your
-              house at no additional cost. Your satisfaction is our number one priority!<br><br>
-              We count with an amazing team! We give them extensive training, so they know everything they need to
-              know to clean your house in the best way possible.
-            </p>
-            <a href="#" class="btn-text" style="color: #0c244c">
-              <span class="span">Get a Quote</span>
-              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-            </a>
-          </div>
-          <figure class="card-banner" data-reveal="right">
-            <img
-              src="./assets/images/service/service-6.jpg"
-              width="600"
-              height="367"
-              loading="lazy"
-              alt="Cleaning Services"
-              class="w-100"
-            />
-          </figure>
-        </div>
-      </li>
-
-      <!-- Project Card 4 -->
-      <li>
-        <div class="project-card project-card-3" style="background-color: #f5faf7">
-          <div class="card-content" data-reveal="left">
-            <p class="card-tag" style="color: #7cb798">
-              ECO-FRIENDLY PRODUCTS
-            </p>
-            <h3 class="h3 card-title">
-              Green Cleaning Services
-            </h3>
-            <p class="card-text">
-              We use gentle, non-toxic solutions, we
-              not only deliver exceptional cleanliness but also protect our planet. Join the green movement and
-              let SUPERSTAR CLEANING SERVICES create a healthier, more sustainable environment for you and your
-              team.<br><br>
-            </p>
-            <a href="#" class="btn-text" style="color: #7cb798">
-              <span class="span">Contact Us</span>
-              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-            </a>
-          </div>
-          <figure class="card-banner" data-reveal="right">
-            <img
-              src="./assets/images/ecofriendly/greeenedited.jpeg"
-              width="600"
-              height="367"
-              loading="lazy"
-              alt="Cleaning Services"
-              class="w-100"
-            />
-          </figure>
-        </div>
-      </li>
-    </ul>
-
-    <!-- Service Areas Section -->
-    <section aria-labelledby="project-label" id="selection_our_service_areas">
-      <br><br>
-      <h2 class="h2 section-title">Our Service Areas</h2>
-      <br>
-      <ul>
-        <li>
-          <div class="project-card project-card-2" style="background-color: #596d89">
-            <div class="card-content" data-reveal="right">
-              <h3 class="h3 card-title" style="color: #ffffff">STAFFORD</h3>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="project-card project-card-1" style="background-color: #2b4469">
-            <div class="card-content" data-reveal="left">
-              <h3 class="h3 card-title" style="color: #ffffff">WOODBRIDGE</h3>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="project-card project-card-2" style="background-color: #596d89">
-            <div class="card-content" data-reveal="right">
-              <h3 class="h3 card-title" style="color: #ffffff">FREDERICKSBURG V.A.</h3>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </section>
-  </div>
-</section>
-
-    <!--
-        - #ABOUT
-      -->
-    <section class="about" aria-label="about" id="type-of-service-section">
-      <div class="container" id="type-of-service-section">
+      <div class="container">
+        <!-- Title Wrapper -->
         <div class="title-wrapper" data-reveal="top">
           <div>
-            <h2 class="h2 section-title" id="project-label" id="type-of-service-section">
+            <h2 class="h2 section-title" id="project-label">
+              About Supertar Cleaning Services Inc.
+            </h2>
+          </div>
+        </div>
+        <!-- Grid List -->
+        <ul class="grid-list">
+          <!-- Project Card 1 -->
+          <li>
+            <div class="project-card project-card-1" style="background-color: #f8f5fb">
+              <div class="card-content2" data-reveal="left">
+                <p class="card-tag" style="color: #bb0823">
+                  OUR HISTORY AND OUR MISSION
+                </p>
+                <h3 class="h3 card-title">
+                  Super Star Cleaning Services Inc. is Excellence & Honesty
+                </h3>
+                <p class="card-text">
+                  A local and family-owned, house and office cleaning
+                  company located in Stafford County, VA. We are more than
+                  15 years in business, licensed registered and insured. If
+                  you need your house or office cleaned. You can call us
+                  or use the contact form on this website.<br><br>
+                  We offer you a FREE estimate over the phone, on-site or online.
+                  Efficient teams of 1-3 people, depending on the size of the project,
+                  will arrive on time ready to serve you. Due to Covid 19 we
+                  are taking extensive measures to ensure your safety
+                  against the virus such as wearing disposable gloves,
+                  shoes, and masks for each service.<br><br>We work Monday through
+                  Fridays. We understand taking care of your families can be
+                  a stressful job to take on, our goal is to help you to
+                  relieve some of that stress and lead on a more harmonious
+                  life with your family.
+                </p>
+                <a href="#" class="btn-text" style="color: #bb0823">
+                  <span class="span">See Services</span>
+                  <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                </a>
+              </div>
+              <figure class="card-banner" data-reveal="right">
+                <img src="./assets/images/service/service-1edited.jpg" width="500" height="500" loading="lazy"
+                  alt="Super Star Cleaning Services Inc." />
+                <br>
+                <img src="./assets/images/service/service-4edited.jpeg" width="500" height="500" loading="lazy"
+                  alt="Super Star Cleaning Services Inc." />
+              </figure>
+            </div>
+          </li>
+
+          <!-- Project Card 2 -->
+          <li id="our_services">
+            <div class="title-wrapper" data-reveal="top">
+              <div>
+                <h2 class="h2 section-title" id="project-label">
+                  Our services
+                </h2>
+              </div>
+            </div>
+
+            <div class="project-card project-card-2" style="background-color: #596d89">
+              <div class="card-content" data-reveal="right">
+                <p class="card-tag" style="color: #041c4c">
+                  Our services
+                </p>
+                <h3 class="h3 card-title" style="color: #ffffff">
+                  Professional Cleaning Service
+                </h3>
+                <p class="card-text" style="color: #ffffff">
+                  All your needs are important to us, and Super Star House Cleaning
+                  wants to make having a clean house as easy as possible for you.
+                  The convenience of our services goes beyond that.
+                  We provide all of our own equipment and supplies to clean and disinfect the surfaces,
+                  so you don’t have to worry about providing them, unless you wish to use your own supplies (Supplies
+                  are thoroughly disinfected for each service provided by us).<br><br>
+                  We can accommodate special instructions
+                  to give you the clean house you desire and try to send the same ladies to do the work every time, so
+                  you know who to expect.<br><br>
+                </p>
+                <a class="btn-text" style="color: #041c4c">
+                  <span class="span">See Type of Services</span>
+                  <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                </a>
+              </div>
+              <figure class="card-banner" data-reveal="right">
+                <img src="./assets/images/service/service-5edited.jpg" width="600" height="367" loading="lazy"
+                  alt="Super Star Cleaning Services Inc." class="w-100" />
+                <br><br>
+                <img src="./assets/images/service/service-4edited.jpg" width="600" height="367" loading="lazy"
+                  alt="Super Star Cleaning Services Inc." class="w-100" />
+              </figure>
+            </div>
+          </li>
+
+          <!-- Quality Clean-->
+          <li id="our_quality">
+
+            <div class="title-wrapper" data-reveal="top">
+              <div>
+                <h2 class="h2 section-title" id="project-label">
+                  Quality Clean
+                </h2>
+              </div>
+            </div>
+
+            <div class="project-card project-card-3" style="background-color: #a87a8d">
+              <div class="card-content" data-reveal="left">
+                <p class="card-tag" style="color: #112e56">
+                  As a Professional Cleaning Service
+                </p>
+                <h3 class="h3 card-title" style="color: #ffffff">
+                  We are committed to a job well done
+                </h3>
+                <p class="card-text" style="color: #ffffff">
+                  If you are not completely satisfied and thrilled with the
+                  cleaning job, notify us within 24 hours, and we will send someone back to re-clean that area of your
+                  house at no additional cost. Your satisfaction is our number one priority!<br><br>
+                  We count with an amazing team! We give them extensive training, so they know everything they need to
+                  know to clean your house in the best way possible.
+                </p>
+                <a href="#" class="btn-text" style="color: #0c244c">
+                  <span class="span">Get a Quote</span>
+                  <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                </a>
+              </div>
+              <figure class="card-banner" data-reveal="right">
+                <img src="./assets/images/service/service-6.jpg" width="600" height="367" loading="lazy"
+                  alt="Cleaning Services" class="w-100" />
+              </figure>
+            </div>
+          </li>
+
+          <!-- Project Card 4 -->
+          <li>
+            <div class="project-card project-card-3" style="background-color: #f5faf7">
+              <div class="card-content" data-reveal="left">
+                <p class="card-tag" style="color: #7cb798">
+                  ECO-FRIENDLY PRODUCTS
+                </p>
+                <h3 class="h3 card-title">
+                  Green Cleaning Services
+                </h3>
+                <p class="card-text">
+                  We use gentle, non-toxic solutions, we
+                  not only deliver exceptional cleanliness but also protect our planet. Join the green movement and
+                  let SUPERSTAR CLEANING SERVICES create a healthier, more sustainable environment for you and your
+                  team.<br><br>
+                </p>
+                <a href="#" class="btn-text" style="color: #7cb798">
+                  <span class="span">Contact Us</span>
+                  <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                </a>
+              </div>
+              <figure class="card-banner" data-reveal="right">
+                <img src="./assets/images/ecofriendly/greeenedited.jpeg" width="600" height="367" loading="lazy"
+                  alt="greeenedited" class="w-100" />
+              </figure>
+            </div>
+          </li>
+        </ul>
+        <!-- Service Areas Section -->
+        <section aria-labelledby="project-label" id="selection_our_service_areas">
+          <br>
+          <h2 class="h2 section-title">Our Service Areas</h2>
+          <br>
+          <ul>
+            <li>
+              <div class="project-card project-card-2" style="background-color: #596d89">
+                <div class="card-content" data-reveal="right">
+                  <h3 class="h3 card-title" style="color: #ffffff">STAFFORD</h3>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="project-card project-card-1" style="background-color: #2b4469">
+                <div class="card-content" data-reveal="left">
+                  <h3 class="h3 card-title" style="color: #ffffff">WOODBRIDGE</h3>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="project-card project-card-2" style="background-color: #596d89">
+                <div class="card-content" data-reveal="right">
+                  <h3 class="h3 card-title" style="color: #ffffff">FREDERICKSBURG V.A.</h3>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </section>
+
+    <!--
+        - #  Type of Services
+      -->
+    <section class="about" id="type-of-service-section">
+      <div class="container">
+        <div class="title-wrapper" data-reveal="top">
+          <div>
+            <h2 class="h2 section-title">
               Type of Services
             </h2>
           </div>
         </div>
-        <br>
         <ul class="grid-list">
           <li data-reveal="bottom">
             <div class="about-card">
@@ -468,12 +420,12 @@
       </div>
     </section>
 
-
+    <!-- Working -->
     <div id="section_working_hours">
-      <div href="#section_working_hours" class="container">
+      <div class="container">
         <div class="title-wrapper" data-reveal="top">
           <div>
-            <br><br>
+            <br>
             <h2 class="h2 section-title" id="project-label">
               Working Hours
             </h2>
@@ -481,134 +433,140 @@
         </div>
         <div class="flex justify-center items-center min-h-screen bg-gray-100">
           <div class="table-container">
-            <table class="centered-table">
-                <thead>
-                    <tr>
-                        <th>Day</th>
-                        <th>Hours</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Monday</td>
-                        <td>8:30 am to 5:00 pm</td>
-                    </tr>
-                    <tr>
-                        <td>Tuesday</td>
-                        <td>8:30 am to 5:00 pm</td>
-                    </tr>
-                    <tr>
-                        <td>Wednesday</td>
-                        <td>8:30 am to 5:00 pm</td>
-                    </tr>
-                    <tr>
-                        <td>Thursday</td>
-                        <td>8:30 am to 5:00 pm</td>
-                    </tr>
-                    <tr>
-                        <td>Friday</td>
-                        <td>8:30 am to 5:00 pm</td>
-                    </tr>
-                    <tr>
-                        <td>Saturday</td>
-                        <td>By appointment only</td>
-                    </tr>
-                    <tr>
-                        <td>Sunday</td>
-                        <td>Closed</td>
-                    </tr>
-                </tbody>
+            <table class="hours-table" class="center">
+              <thead>
+                <tr>
+                  <th>Day</th>
+                  <th>Hours</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Monday</td>
+                  <td>8:30 am to 5:00 pm</td>
+                </tr>
+                <tr>
+                  <td>Tuesday</td>
+                  <td>8:30 am to 5:00 pm</td>
+                </tr>
+                <tr>
+                  <td>Wednesday</td>
+                  <td>8:30 am to 5:00 pm</td>
+                </tr>
+                <tr>
+                  <td>Thursday</td>
+                  <td>8:30 am to 5:00 pm</td>
+                </tr>
+                <tr>
+                  <td>Friday</td>
+                  <td>8:30 am to 5:00 pm</td>
+                </tr>
+                <tr>
+                  <td>Saturday</td>
+                  <td>By appointment only</td>
+                </tr>
+                <tr>
+                  <td>Sunday</td>
+                  <td>Closed</td>
+                </tr>
+              </tbody>
             </table>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="col-md-4 col-md-pull-6 animate-box">
-      <div class="gtco-contact-info">
-        <ul>
-          <li class="address">Stafford , VA. 22554</li>
-          <li class="phone"><a href="tel://5404466947">+ (540) 446 6947</a></li>
-          <li class="email"><a
-              href="mailto:cleansuperstar@hotmail.com">cleansuperstar@hotmail.com</a></li>
-          <!--<li class="url"><a href="#">http://example.com</a></li>-->
-        </ul>
-      </div>
-    </div>
-
-    <!-- 
+      <!-- 
         - #CONTACT
       -->
-
-    <section class="section contact" id="contact-section" aria-label="contact">
-      <div class="container">
-        <div class="contact-card">
-          <div class="contact-content" data-reveal="left">
-            <div class="card-icon">
-              <img src="./assets/images/contactUs/envelopEdited.png" width="80" height="80" loading="lazy"
-                alt="envelop icon" />
+      <section class="section contact" aria-label="contact">
+        <div class="container">
+          <div class="title-wrapper" data-reveal="top">
+            <div>
+              <h2 class="h2 section-title" id="contact-section">
+                Contact Us
+              </h2>
             </div>
-            <h2 class="h2 section-title" style="color: #ffffff">
-              Contact Us
-            </h2>
-            <p class="section-text" style="color: #ffff">
-              Get in touch with SUPERSTAR Cleaning Services INC. to make
-              your life brighter. Have any questions?
-              <br> <br>
-              Fill out this contact
-              form and we will get back to you shortly.
-            </p>
           </div>
-<form action="phpmailer.php" method="post" class="contact-form" id="contact-form">
-  <div class="input-wrapper">
-    <div class="input-group">
-      <label for="name" class="sr-only">Name</label>
-      <input type="text" id="name" name="name" placeholder="Name *" required class="input-field" />
-    </div>
-
-    <div class="input-group">
-      <label for="email" class="sr-only">Email</label>
-      <input type="email" id="email" name="email_address" placeholder="Email *" required class="input-field" />
-    </div>
-
-    <div class="input-group">
-      <label for="phone" class="sr-only">Phone</label>
-      <input type="tel" id="phone" name="phone" placeholder="Phone *" required class="input-field" />
-    </div>
-  </div>
-
-  <div class="textarea-group">
-    <label for="message" class="sr-only">Message</label>
-    <textarea id="message" name="message" placeholder="Message *" required class="input-field"></textarea>
-  </div>
-
-  <!-- Google reCAPTCHA widget -->
-  <div class="g-recaptcha" data-sitekey="6Lcky4AqAAAAAO7TOmMFFJgcIW6msye-IugiOEMJ" data-callback="onRecaptchaSuccess"></div>
-
-  <!-- Submit button -->
-  <button type="submit" class="btn btn-secondary" aria-label="Send Message">
-    Send Message
-  </button>
-</form>
-
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-<script type="text/javascript">
-  function onRecaptchaSuccess() {
-    // You can handle the form submission logic here, if needed
-    document.getElementById("contact-form").submit();
-  }
-</script>
-
+          <div class="contact-card">
+            <div class="contact-content" data-reveal="left">
+              <div class="card-icon">
+                <img src="./assets/images/contactUs/envelopEdited.png" width="80" height="80" loading="lazy"
+                  alt="envelop icon" />
+              </div>
+              <h2 class="h2 section-title" style="color: #ffffff">
+                Contact Us
+              </h2>
+              <p class="section-text" style="color: #ffff">
+                Get in touch with SUPERSTAR Cleaning Services INC. to make
+                your life brighter. Have any questions?
+                <br> <br>
+                Fill out this contact
+                form and we will get back to you shortly.
+              </p>
+            </div>
+            <form action="phpmailer.php" method="post" class="contact-form" id="contact-form">
+              <!-- Wrapper for input fields -->
+              <div class="input-wrapper">
+                <!-- Name Input -->
+                <div class="input-group">
+                  <label for="name" class="sr-only">Name</label>
+                  <input type="text" id="name" name="name" placeholder="Name *" required class="input-field" />
+                </div>
+                <!-- Email Input -->
+                <div class="input-group">
+                  <label for="email" class="sr-only">Email</label>
+                  <input type="email" id="email" name="email_address" placeholder="Email *" required
+                    class="input-field" />
+                </div>
+              </div>
+              <div class="input-wrapper">
+                <!-- Phone Input -->
+                <div class="input-group">
+                  <label for="phone" class="sr-only">Phone</label>
+                  <input type="tel" id="phone" name="phone" placeholder="Phone *" required class="input-field" />
+                </div>
+                <!-- Location Select -->
+                <div class="input-group">
+                  <label for="location" class="sr-only">Location</label>
+                  <select id="location" name="location" required class="input-field">
+                    <option value="" disabled selected>Select your location *</option>
+                    <option value="stafford">Stafford</option>
+                    <option value="woodbridge">Woodbridge</option>
+                    <option value="fredericksburg">Fredericksburg V.A</option>
+                  </select>
+                </div>
+              </div>
+              <!-- Message Textarea -->
+              <div class="textarea-group">
+                <label for="message" class="sr-only">Message</label>
+                <textarea id="message" name="message" placeholder="Message *" required class="input-field"></textarea>
+              </div>
+              <!-- Google reCAPTCHA widget -->
+              <div class="captcha-wrapper">
+                <div class="g-recaptcha" data-sitekey="6Lcky4AqAAAAAO7TOmMFFJgcIW6msye-IugiOEMJ"
+                  data-callback="onRecaptchaSuccess">
+                </div>
+                <span id="captcha-error" class="hidden text-white text-sm" style="color:#ffff">Please verify you are not
+                  a robot.</span>
+              </div>
+              <!-- Submit button -->
+              <button type="submit" class="btn btn-secondary mt-4 disabled:opacity-50" aria-label="Send Message"
+                disabled id="submit-button">
+                Send Message
+              </button>
+              <!-- Success Message -->
+              <div id="success-message" class="hidden text-white text-sm mt-2" style="color:#ffff">Your message has been
+                sent successfully!</div>
+            </form>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
   </main>
 
   <!-- 
     - #FOOTER
   -->
-
   <!-- Phone Button -->
   <a href="tel:+ (540) 446 6947" target="_blank" class="phone-button" aria-label="Chat with us on WhatsApp">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -620,16 +578,11 @@
   </a>
   <div class="tooltip">I want to acquire the cleaning service</div>
 
-
-
-
-
   <footer class="footer">
     <div class="container">
       <p class="copyright">
         © 2024 SUPERSTAR Cleaning Services INC. <br> All rights reserved.
       </p>
-
       <ul class="social-list">
         <li>
           <a href="https://www.facebook.com/profile.php?id=61564072708336" class="social-link">
@@ -656,3 +609,96 @@
 </body>
 
 </html>
+
+
+<style>
+  /* menú */
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .navbar-list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .navbar-link {
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    transition: background-color 0.3s;
+  }
+
+  .navbar-item.has-submenu {
+    position: relative;
+  }
+
+  .submenu {
+    display: none;
+    padding-left: 20px;/
+  }
+
+  .submenu li {
+    padding: 8px 0;
+  }
+
+  .navbar-item.has-submenu.active .submenu {
+    display: block;
+    animation: slide-down 0.3s ease-out;
+  }
+
+  @keyframes slide-down {
+    from {
+      transform: translateY(-10px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+</style>
+
+<script>
+  const submenuItems = document.querySelectorAll('.navbar-item.has-submenu');
+  submenuItems.forEach(item => {
+    const submenuLink = item.querySelector('a');
+    submenuLink.addEventListener('click', function (e) {
+      e.preventDefault();
+      item.classList.toggle('active');
+    });
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.navbar') && !e.target.closest('.navbar-item.has-submenu')) {
+      submenuItems.forEach(item => {
+        item.classList.remove('active');
+      });
+    }
+  });
+
+  submenuItems.forEach(item => {
+    item.addEventListener('click', function (e) {
+      e.stopPropagation();
+    });
+  });
+</script>
+
+<!-- reCAPTCHA -->
+<script>
+  document.getElementById('contact-form').addEventListener('submit', function (event) {
+    const recaptchaResponse = grecaptcha.getResponse();
+    if (!recaptchaResponse) {
+      event.preventDefault();
+      document.getElementById('captcha-error').classList.remove('hidden');
+    } else {
+      document.getElementById('captcha-error').classList.add('hidden');
+      document.getElementById('success-message').classList.remove('hidden');
+    }
+  });
+  function onRecaptchaSuccess() {
+    document.getElementById('captcha-error').classList.add('hidden');
+    document.getElementById('submit-button').disabled = false;
+  }
+</script>

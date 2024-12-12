@@ -1,11 +1,14 @@
 <?php
-// Verifica si la solicitud es de tipo POST
+// Start output buffering to prevent header errors
+ob_start();
+
+// Allow only POST requests
 if ($_SERVER['REQUEST_METHOD'] != 'POST') {
-    header("Location: index.html");
-    exit();
+  header("Location: index.html");
+  exit();
 }
 
-// Requiere los archivos necesarios de PHPMailer
+// Require PHPMailer classes
 require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
@@ -13,55 +16,76 @@ require 'phpmailer/Exception.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-// Datos del formulario enviados por el usuario
-$name = $_POST['name'] ?? 'anonimo';
-$email = $_POST['email_address'] ?? 'no-email@example.com';
-$phone = $_POST['phone'] ?? 'No proporcionado';
-$message = $_POST['message'] ?? '';
+// Sanitize input data to prevent XSS and injection attacks
+function sanitize_input($data)
+{
+  return htmlspecialchars(stripslashes(trim($data)));
+}
 
-// Cuerpo del correo que será enviado a karlamenesses19@gmail.com
+$name = sanitize_input($_POST['name'] ?? 'Anonymous');
+$email = filter_var($_POST['email_address'], FILTER_VALIDATE_EMAIL) ? sanitize_input($_POST['email_address']) : 'no-email@example.com';
+$phone = sanitize_input($_POST['phone'] ?? 'Not Provided');
+$location = sanitize_input($_POST['location'] ?? 'Not Specified');
+$message = sanitize_input($_POST['message'] ?? '');
+
+// Verify Google reCAPTCHA response
+$recaptcha_secret = '6Lcky4AqAAAAAO7TOmMFFJgcIW6msye-IugiOEMJ';
+$recaptcha_response = $_POST['g-recaptcha-response'] ?? '';
+$recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
+$recaptcha_verify = file_get_contents($recaptcha_url . '?secret=' . $recaptcha_secret . '&response=' . $recaptcha_response);
+$recaptcha_result = json_decode($recaptcha_verify, true);
+
+if (!$recaptcha_result['success']) {
+  echo "Error: reCAPTCHA validation failed.";
+  ob_end_flush();
+  exit();
+}
+
+// Email body
 $body = <<<HTML
-    <h1>Solicitud de Contacto</h1>
-    <p><strong>Nombre:</strong> $name</p>
-    <p><strong>Teléfono:</strong> $phone</p>
-    <p><strong>Correo Electrónico:</strong> $email</p>
-    <h2>Mensaje:</h2>
+    <h1>Contact Request</h1>
+    <p><strong>Name:</strong> $name</p>
+    <p><strong>Phone:</strong> $phone</p>
+    <p><strong>Email:</strong> $email</p>
+    <p><strong>Location:</strong> $location</p>
+    <h2>Message:</h2>
     <p>$message</p>
 HTML;
 
 try {
-    // Instancia de PHPMailer
-    $mailer = new PHPMailer(true);
+  $mailer = new PHPMailer(true);
 
-    // Configuración del servidor SMTP
-    $mailer->isSMTP();                                        // Usar SMTP
-    $mailer->Host = 'smtp.gmail.com';                         // Servidor SMTP
-    $mailer->SMTPAuth = true;                                 // Activar autenticación SMTP
-    $mailer->Username = 'andreageraldinne@gmail.com';          // Tu correo SMTP
-    $mailer->Password = 'rdik mjcg shcm hmeo';                           // Tu contraseña SMTP generada por GOOGLE
-    $mailer->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;     // Encriptación TLS
-    $mailer->Port = 587;                                      // Puerto TCP para TLS
+  // SMTP configuration
+  $mailer->isSMTP();
+  $mailer->Host = 'smtp.gmail.com';
+  $mailer->SMTPAuth = true;
+  $mailer->Username = 'andreageraldinne@gmail.com';
+  $mailer->Password = 'rdik mjcg shcm hmeo'; // Use a secure app password
+  $mailer->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+  $mailer->Port = 587;
 
-    // Configuración del correo
-    $mailer->setFrom('cleansuperstar@hotmail.com', 'Formulario de Contacto'); // Correo remitente (tu cuenta SMTP)
-    $mailer->addAddress('cleansuperstar@hotmail.com', 'Administrador');      // Correo de la empresa o administrador
-    
-    // Contenido del correo
-    $mailer->isHTML(true);                                    // Enviar correo en formato HTML
-    $mailer->Subject = 'Nueva Solicitud de Contacto';          // Asunto del correo
-    $mailer->Body    = $body;                                 // Cuerpo del correo en HTML
-    $mailer->AltBody = strip_tags($body);                     // Alternativa en texto plano
-    $mailer->CharSet = 'UTF-8';                               // Codificación de caracteres
+  // Recipient settings
+  $mailer->setFrom('andreageraldinne@gmail.com', 'Website Contact');
+  $mailer->addAddress('cleansuperstar@hotmail.com', 'Administrator');
 
-    // Enviar correo
-    if ($mailer->send()) {
-        echo 'La solicitud ha sido enviada correctamente.';
-    } else {
-        echo 'No se pudo enviar la solicitud.';
-        //echo 'Mailer Error:aaaaaaaaaa ' . $mailer->ErrorInfo;
+  // Email content
+  $mailer->isHTML(true);
+  $mailer->Subject = 'New Contact Request';
+  $mailer->Body = $body;
+  $mailer->AltBody = strip_tags($body);
+  $mailer->CharSet = 'UTF-8';
 
-    }
+  // Send email
+  if ($mailer->send()) {
+    header("Location: index.html");
+    exit();
+  } else {
+    echo "Error: Unable to send the email.";
+  }
 } catch (Exception $e) {
-    // Mostrar el error si ocurre
-    echo "Error al enviar la solicitud: {$mailer->ErrorInfo}";
+  error_log("PHPMailer Error: {$mailer->ErrorInfo}");
+  echo "Error: Something went wrong while sending your message.";
 }
+
+// Clean output buffer
+ob_end_flush();
